@@ -26,6 +26,7 @@ class VisitLogCell: UITableViewCell {
         lblLocationDescription.text = location.description
         lblLocationDate.text = location.dateString
         lblLocationId.text = "#\(index)"
+        layoutIfNeeded()
     }
     
     override func layoutSubviews() {

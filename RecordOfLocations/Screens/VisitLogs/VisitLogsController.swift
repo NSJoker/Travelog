@@ -24,7 +24,7 @@ class VisitLogsController: UIViewController {
         super.viewDidLoad()
         setupUI()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(newLocationFound), name: .init("newLocation"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(newLocationFound), name: .newLocationSaved, object: nil)
     }
     
     //MARK: Public Methods

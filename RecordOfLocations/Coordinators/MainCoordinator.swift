@@ -18,7 +18,7 @@ class MainCoordinator: Coordinator {
         
         checkPermissions { status in
             if status {
-                self.showNextScreen()
+                self.showVisitLogScreen()
             } else {
                 DispatchQueue.main.async {
                     let permissionsController = PermissionsController(viewModel: .init(coordinator: self))
@@ -43,9 +43,7 @@ class MainCoordinator: Coordinator {
         }
     }
     
-    func showNextScreen() {
-        print("show table")
-        
+    func showVisitLogScreen() {        
         DispatchQueue.main.async {
             let visitLogsController = VisitLogsController(viewModel: .init(coordinator: self))
             self.navigationContoller.isNavigationBarHidden = true

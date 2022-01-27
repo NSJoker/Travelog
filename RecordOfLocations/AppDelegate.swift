@@ -19,7 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         //To create fake visits, set the below func param as true. Run the app in  simulator and enable the "Route" gps route start fake walking.
+        #if targetEnvironment(simulator)
         LocationServicesManager.shared.startFetchingLocations(isFake: true)
+        #else
+        LocationServicesManager.shared.startFetchingLocations(isFake: false)
+        #endif
         return true
     }
 

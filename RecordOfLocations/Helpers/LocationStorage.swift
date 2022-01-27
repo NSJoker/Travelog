@@ -23,8 +23,7 @@ class LocationsStorage {
     
     let jsonDecoder = JSONDecoder()
     
-    let locationFilesURLs = try! fileManager.contentsOfDirectory(at: documentsURL,
-                                                                 includingPropertiesForKeys: nil)
+    let locationFilesURLs = try! fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
     locations = locationFilesURLs.compactMap { url -> Location? in
       guard !url.absoluteString.contains(".DS_Store") else {
         return nil
@@ -58,8 +57,4 @@ class LocationsStorage {
       }
     }
   }
-}
-
-extension Notification.Name {
-  static let newLocationSaved = Notification.Name("newLocationSaved")
 }

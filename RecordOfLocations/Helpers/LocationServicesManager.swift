@@ -64,7 +64,6 @@ class LocationServicesManager: NSObject {
         let location = Location(visit: visit, descriptionString: description)
         LocationsStorage.shared.saveLocationOnDisk(location)
         NotificationServicesManager.shared.notifiyNewLocationVisit(location: location)
-        NotificationCenter.default.post(name: .init("newLocation"), object: nil, userInfo: [:])
       }
 }
 

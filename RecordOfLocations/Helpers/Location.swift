@@ -8,6 +8,7 @@
 import CoreLocation
 
 class Location: Codable {
+    //We have made this static so that the class becomes Codable!
   static let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .medium

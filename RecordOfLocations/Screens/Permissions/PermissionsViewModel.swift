@@ -59,7 +59,7 @@ class PermissionsViewModel {
         coordinator.checkPermissions { [weak self] status in
             guard let self = self else {return}
             if status {
-                self.coordinator.showNextScreen()
+                self.coordinator.showVisitLogScreen()
             }
         }
     }
