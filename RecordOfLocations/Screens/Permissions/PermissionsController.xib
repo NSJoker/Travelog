@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PermissionsController" customModule="RecordOfLocations" customModuleProvider="target">
+            <connections>
+                <outlet property="btnLocationAccess" destination="D2f-xe-98M" id="PXQ-DV-E85"/>
+                <outlet property="btnNotificationAccess" destination="AHn-BN-1Hp" id="dcK-6h-jlY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEf-Yj-Puc">
+                    <rect key="frame" x="20" y="30" width="984" height="37"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uq8-Pp-X5b">
+                    <rect key="frame" x="20" y="97" width="984" height="277"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need the following permissions to fully showcase the capabilities of this application." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwp-WU-N4K">
+                            <rect key="frame" x="0.0" y="0.0" width="984" height="17"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpL-dL-RZv">
+                            <rect key="frame" x="0.0" y="47" width="984" height="100"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2f-xe-98M">
+                                    <rect key="frame" x="417" y="28" width="150" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="G8U-Dy-O4u"/>
+                                        <constraint firstAttribute="width" constant="150" id="WdY-aI-dYc"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <state key="normal" title="Location Access"/>
+                                    <connections>
+                                        <action selector="didTapLocationAccessButton:" destination="-1" eventType="touchUpInside" id="Vh5-I2-JtM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="ZWf-dD-4a8"/>
+                                <constraint firstItem="D2f-xe-98M" firstAttribute="centerX" secondItem="mpL-dL-RZv" secondAttribute="centerX" id="c2M-Hh-zlX"/>
+                                <constraint firstItem="D2f-xe-98M" firstAttribute="centerY" secondItem="mpL-dL-RZv" secondAttribute="centerY" id="ygP-2d-e1b"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfY-yd-23x">
+                            <rect key="frame" x="0.0" y="177" width="984" height="100"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHn-BN-1Hp">
+                                    <rect key="frame" x="367" y="28" width="250" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="cP6-tW-ftP"/>
+                                        <constraint firstAttribute="height" constant="44" id="uzO-sO-AMq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <state key="normal" title="User Notification access"/>
+                                    <connections>
+                                        <action selector="didTapUserNotificationButton:" destination="-1" eventType="touchUpInside" id="CLa-tK-hSv"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="AHn-BN-1Hp" firstAttribute="centerY" secondItem="cfY-yd-23x" secondAttribute="centerY" id="fuL-Vo-O6d"/>
+                                <constraint firstItem="AHn-BN-1Hp" firstAttribute="centerX" secondItem="cfY-yd-23x" secondAttribute="centerX" id="tLg-i0-LI2"/>
+                                <constraint firstAttribute="height" constant="100" id="wtr-29-iQk"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JEf-Yj-Puc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="C5G-kR-CAZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uq8-Pp-X5b" secondAttribute="bottom" constant="30" id="GSw-Jc-IdX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JEf-Yj-Puc" secondAttribute="trailing" constant="20" id="QAq-mC-hmK"/>
+                <constraint firstItem="JEf-Yj-Puc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="R4e-Jd-OQq"/>
+                <constraint firstItem="uq8-Pp-X5b" firstAttribute="top" secondItem="JEf-Yj-Puc" secondAttribute="bottom" constant="30" id="mff-f7-KYz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uq8-Pp-X5b" secondAttribute="trailing" constant="20" id="oys-Qa-UZ3"/>
+                <constraint firstItem="uq8-Pp-X5b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yZM-Qj-1wZ"/>
+            </constraints>
+            <point key="canvasLocation" x="42" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
